@@ -1,0 +1,11 @@
+LOCAL_OBJECTS = \
+freeSurface.o\
+makeFreeSurfaceData.o\
+freeSurfacePointDisplacement.o\
+correctedFvPatchFields.o\
+fixedGradientCorrectedFvPatchFields.o\
+fixedValueCorrectedFvPatchFields.o\
+zeroGradientCorrectedFvPatchFields.o\
+patchCorrectedSnGrads.o\
+bubbleHistory.o\
+sloshingHistory.o

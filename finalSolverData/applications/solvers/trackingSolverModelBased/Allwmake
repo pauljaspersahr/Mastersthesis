@@ -1,0 +1,7 @@
+#!/bin/sh
+set -x
+
+wmake libso freeSurface
+
+wmake interTrackFoam
+wmake bubbleInterTrackFoam

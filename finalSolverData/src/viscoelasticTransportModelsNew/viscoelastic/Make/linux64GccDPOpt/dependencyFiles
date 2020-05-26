@@ -1,0 +1,6 @@
+DEPENDENCIES = \
+viscoelasticModel/viscoelasticModel.dep\
+viscoelasticLaws/viscoelasticLaw/viscoelasticLaw.dep\
+viscoelasticLaws/viscoelasticLaw/newViscoelasticLaw.dep\
+viscoelasticLaws/EPTT/EPTT.dep\
+viscoelasticLaws/multiMode/multiMode.dep

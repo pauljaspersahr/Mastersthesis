@@ -1,0 +1,20 @@
+EXE_INC = \
+    -I$(WM_PROJECT_USER_DIR)/src/viscoelasticTransportModelsNew/viscoelastic/lnInclude \
+    -I$(WM_PROJECT_USER_DIR)/src/finiteArea/lnInclude \
+    -I$(WM_PROJECT_USER_DIR)/src/finiteVolume/lnInclude \
+    -I$(LIB_SRC)/meshTools/lnInclude \
+    -I$(LIB_SRC)/dynamicMesh/dynamicMesh/lnInclude \
+    -I$(LIB_SRC)/dynamicMesh/dynamicFvMesh/lnInclude\
+    -I$(LIB_SRC)/tetFiniteElement/lnInclude \
+    -I$(LIB_SRC)/dynamicMesh/meshMotion/tetMotionSolver/lnInclude
+
+LIB_LIBS = \
+    -L$(FOAM_USER_LIBBIN) \
+    -lviscoelasticTransportModelsNew \
+    -lfiniteAreaMod \
+    -lfiniteVolumeMod \
+    -L$(FOAM_LIBBIN) \
+    -lmeshTools \
+    -ldynamicMesh \
+    -ltetFiniteElement \
+    -ltetMotionSolver

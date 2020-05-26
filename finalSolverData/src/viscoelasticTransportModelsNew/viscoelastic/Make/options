@@ -1,0 +1,8 @@
+EXE_INC = \
+    -I$(WM_PROJECT_USER_DIR)/src/finiteArea/lnInclude \
+    -I$(WM_PROJECT_USER_DIR)/src/finiteVolume/lnInclude
+
+LIB_LIBS = \
+    -L$(FOAM_USER_LIBBIN) \
+    -lfiniteAreaMod \
+    -lfiniteVolumeMod 

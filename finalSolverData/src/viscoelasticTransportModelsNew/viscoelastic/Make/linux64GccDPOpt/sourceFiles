@@ -1,0 +1,6 @@
+SOURCE = \
+viscoelasticModel/viscoelasticModel.C\
+viscoelasticLaws/viscoelasticLaw/viscoelasticLaw.C\
+viscoelasticLaws/viscoelasticLaw/newViscoelasticLaw.C\
+viscoelasticLaws/EPTT/EPTT.C\
+viscoelasticLaws/multiMode/multiMode.C

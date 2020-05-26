@@ -1,0 +1,6 @@
+LOCAL_OBJECTS = \
+viscoelasticModel.o\
+viscoelasticLaw.o\
+newViscoelasticLaw.o\
+EPTT.o\
+multiMode.o

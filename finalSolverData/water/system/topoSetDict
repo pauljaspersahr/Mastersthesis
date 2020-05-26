@@ -1,0 +1,53 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | foam-extend: Open Source CFD                    |
+|  \\    /   O peration     | Version:     4.0                                |
+|   \\  /    A nd           | Web:         http://www.foam-extend.org         |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    class       dictionary;
+    location    "system";
+    object      fvSchemes;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+actions
+(
+  {
+    name    selectedFaces;
+    type    faceSet;
+    action  new;
+    source  patchToFace;
+    sourceInfo
+    {
+      name freeSurface;
+    }
+  }
+
+  {
+    name    selectedFaces;
+    type    faceSet;
+    action  add;
+    source  patchToFace;
+    sourceInfo
+    {
+      name freeSurfaceShadow;
+    }
+  }
+  {
+    name    selectedFZ;
+    type    faceZoneSet;
+    action  new;
+    source  setToFaceZone;
+    sourceInfo
+    {
+      faceSet selectedFaces;
+    }
+  }
+);
+
+
+// ************************************************************************* //

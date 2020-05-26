@@ -1,0 +1,8 @@
+DEPENDENCIES = \
+interfaceProperties.dep\
+interfaceCompression/interfaceCompression.dep\
+alphaContactAngle/alphaContactAngle/alphaContactAngleFvPatchScalarField.dep\
+alphaContactAngle/constantAlphaContactAngle/constantAlphaContactAngleFvPatchScalarField.dep\
+alphaContactAngle/dynamicAlphaContactAngle/dynamicAlphaContactAngleFvPatchScalarField.dep\
+alphaContactAngle/timeVaryingAlphaContactAngle/timeVaryingAlphaContactAngleFvPatchScalarField.dep\
+alphaFixedPressure/alphaFixedPressureFvPatchScalarField.dep

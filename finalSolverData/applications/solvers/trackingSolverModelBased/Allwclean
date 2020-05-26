@@ -1,0 +1,9 @@
+#!/bin/sh
+set -x
+
+wclean freeSurface
+
+wclean interTrackFoam
+wclean bubbleInterTrackFoam
+
+wclean ./utilities/setFluidIndicator

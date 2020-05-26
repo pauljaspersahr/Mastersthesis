@@ -1,0 +1,52 @@
+# 1 "files"
+# 1 "<built-in>"
+# 1 "<command-line>"
+
+
+# 1 "/usr/include/stdc-predef.h" 1 3 4
+
+# 17 "/usr/include/stdc-predef.h" 3 4
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# 2 "<command-line>" 2
+# 1 "files"
+freeSurface.C
+makeFreeSurfaceData.C
+freeSurfacePointDisplacement.C
+
+correctedFvPatchFields/correctedFvPatchField/correctedFvPatchFields.C
+
+basicCorrectedFvPatchFields = correctedFvPatchFields/basicCorrectedFvPatchFields
+$(basicCorrectedFvPatchFields)/fixedGradient/fixedGradientCorrectedFvPatchFields.C
+$(basicCorrectedFvPatchFields)/fixedValue/fixedValueCorrectedFvPatchFields.C
+$(basicCorrectedFvPatchFields)/zeroGradient/zeroGradientCorrectedFvPatchFields.C
+
+
+
+patchCorrectedSnGrad/patchCorrectedSnGrads.C
+
+functionObjects/bubbleHistory/bubbleHistory.C
+functionObjects/sloshingHistory/sloshingHistory.C
+
+LIB = $(FOAM_USER_LIBBIN)/libviscoFreeSurfaceModel

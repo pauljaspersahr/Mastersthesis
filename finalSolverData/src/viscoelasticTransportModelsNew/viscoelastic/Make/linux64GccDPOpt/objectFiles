@@ -1,0 +1,6 @@
+OBJECTS = \
+$(OBJECTS_DIR)/viscoelasticModel.o\
+$(OBJECTS_DIR)/viscoelasticLaw.o\
+$(OBJECTS_DIR)/newViscoelasticLaw.o\
+$(OBJECTS_DIR)/EPTT.o\
+$(OBJECTS_DIR)/multiMode.o

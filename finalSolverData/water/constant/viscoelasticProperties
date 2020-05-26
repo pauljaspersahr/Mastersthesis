@@ -1,0 +1,69 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  2.3.1                                 |
+|   \\  /    A nd           | Web:      www.OpenFOAM.org                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    class       dictionary;
+    location    "constant";
+    object      transportProperties;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+// CMC 5g/kg
+
+
+rheology
+{
+
+        type multiMode;
+
+        models
+        (
+            first
+            {
+            type PTT-Exponential;
+                rho              rho [1 -3 0 0 0 0 0] 1011;
+                etaS             etaS [1 -1 -1 0 0 0 0] 41.650e-5;
+                etaP             etaP [1 -1 -1 0 0 0 0] 41.650e-5;
+                lambda           lambda [0 0 1 0 0 0 0] 0;
+                epsilon          epsilon [0 0 0 0 0 0 0] 0;
+                zeta             zeta [0 0 0 0 0 0 0] 0;
+            }
+
+/*            second
+            {
+            type PTT-Exponential;
+                        rho              rho [1 -3 0 0 0 0 0] 1011;
+                        etaS             etaS [1 -1 -1 0 0 0 0] 0.000986570258989848;
+                        etaP             etaP [1 -1 -1 0 0 0 0] 1.937052962549729584e-01;
+                        lambda           lambda [0 0 1 0 0 0 0] 8.579350239023403324e-01;
+                        epsilon          epsilon [0 0 0 0 0 0 0] 9.99999000e-01;
+                        zeta             zeta [0 0 0 0 0 0 0] 1.00000003e-06;
+            }
+
+            third
+            {
+            type PTT-Exponential; 
+                        rho              rho [1 -3 0 0 0 0 0] 1011;
+                        etaS             etaS [1 -1 -1 0 0 0 0] 0.000986570258989848;
+                        etaP             etaP [1 -1 -1 0 0 0 0] 1.603085747774877778e-01;
+                        lambda           lambda [0 0 1 0 0 0 0] 3.118003870311959053e-02;
+                        epsilon          epsilon [0 0 0 0 0 0 0] 9.99999000e-01;
+                        zeta             zeta [0 0 0 0 0 0 0] 1.00000001e-06;
+            }*/
+
+        );
+
+}
+    
+
+
+// ************************************************************************* //
+
+// ************************************************************************* //

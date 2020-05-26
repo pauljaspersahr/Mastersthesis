@@ -1,0 +1,11 @@
+OBJECTS = \
+$(OBJECTS_DIR)/freeSurface.o\
+$(OBJECTS_DIR)/makeFreeSurfaceData.o\
+$(OBJECTS_DIR)/freeSurfacePointDisplacement.o\
+$(OBJECTS_DIR)/correctedFvPatchFields.o\
+$(OBJECTS_DIR)/fixedGradientCorrectedFvPatchFields.o\
+$(OBJECTS_DIR)/fixedValueCorrectedFvPatchFields.o\
+$(OBJECTS_DIR)/zeroGradientCorrectedFvPatchFields.o\
+$(OBJECTS_DIR)/patchCorrectedSnGrads.o\
+$(OBJECTS_DIR)/bubbleHistory.o\
+$(OBJECTS_DIR)/sloshingHistory.o

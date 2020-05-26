@@ -1,0 +1,10 @@
+include freeSurface.dep
+include makeFreeSurfaceData.dep
+include freeSurfacePointDisplacement.dep
+include correctedFvPatchFields/correctedFvPatchField/correctedFvPatchFields.dep
+include $(basicCorrectedFvPatchFields)/fixedGradient/fixedGradientCorrectedFvPatchFields.dep
+include $(basicCorrectedFvPatchFields)/fixedValue/fixedValueCorrectedFvPatchFields.dep
+include $(basicCorrectedFvPatchFields)/zeroGradient/zeroGradientCorrectedFvPatchFields.dep
+include patchCorrectedSnGrad/patchCorrectedSnGrads.dep
+include functionObjects/bubbleHistory/bubbleHistory.dep
+include functionObjects/sloshingHistory/sloshingHistory.dep

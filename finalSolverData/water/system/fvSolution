@@ -1,0 +1,101 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | foam-extend: Open Source CFD                    |
+|  \\    /   O peration     | Version:     4.0                                |
+|   \\  /    A nd           | Web:         http://www.foam-extend.org         |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    class       dictionary;
+    location    "system";
+    object      fvSolution;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+solvers
+{
+    p
+    {
+        solver          PCG;
+        preconditioner  DIC;
+        tolerance       1e-06;
+        relTol          0;
+    }
+
+    U
+    {
+        solver          BiCGStab;
+        preconditioner  DILU;
+        tolerance       1e-05;
+        relTol          0;
+    }
+    
+    taufirst                                // added 23.07.19: copied from viscoelasticFluidFoam case
+    {
+        solver            BiCGStab;
+        preconditioner   ILU0;
+
+        tolerance         1e-6;
+        relTol            0;
+        minIter           0;
+        maxIter           1000;
+    }
+    tausecond                                // added 23.07.19: copied from viscoelasticFluidFoam case
+    {
+        solver            BiCGStab;
+        preconditioner   ILU0;
+
+        tolerance         1e-6;
+        relTol            0;
+        minIter           0;
+        maxIter           1000;
+    }
+
+    tauthird                                // added 23.07.19: copied from viscoelasticFluidFoam case
+    {
+        solver            BiCGStab;
+        preconditioner   ILU0;
+
+        tolerance         1e-6;
+        relTol            0;
+        minIter           0;
+        maxIter           1000;
+    }
+
+}
+
+
+
+PIMPLE
+{
+    pRefPoint (0.00001 0.00001 0);
+    pRefValue 0;
+    momentumPredictor off;
+    nCorrectors     3;                  //3
+    nOuterCorrectors    200;
+    nNonOrthogonalCorrectors 2;         //2
+    residualControl
+    {
+        U
+        {
+                tolerance  5e-5;
+                relTol      0;
+        }
+        p
+        {
+                tolerance  1e-4;
+                relTol      0;
+        }
+/*        "tau.*"
+        {
+                tolerance  1e-4;
+                relTol      0;
+        }*/
+     }
+}
+
+
+// ************************************************************************* //

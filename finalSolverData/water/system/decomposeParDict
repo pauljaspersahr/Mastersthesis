@@ -1,0 +1,67 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | foam-extend: Open Source CFD                    |
+|dsfkljsdfkljdhfs 
+ 
+ i pküi kw,dmfgkldfjgö äöl äökadqw9<dfs  ü
+
+
+
+
+
+
+
+
+
+
+
+
+
+      \\    /   O peration     | Version:     4.0                                |
+|   \\  /    A nd           | Web:         http://www.foam-extend.org         |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    class       dictionary;
+    location    "system";
+    object      decomposeParDict;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+numberOfSubdomains   4;
+
+//method               simple;
+method               scotch;
+//method               hierarchical;
+//method               metis;
+//method               manual;
+
+preserveFaceZones (selectedFZ);
+preservePatches (freeSurface freeSurfaceShadow);
+singleProcessorFaceSets ((selectedFaces 0));
+preserveBaffles true;
+
+
+simpleCoeffs
+{
+    n                    (2 2 1);
+    delta                0.001;
+}
+
+hierarchicalCoeffs
+{
+    n                    (2 2 1);
+    delta                0.001;
+    order                xyz;
+}
+
+manualCoeffs
+{
+    dataFile             "decompositionData";
+}
+
+
+// ************************************************************************* //

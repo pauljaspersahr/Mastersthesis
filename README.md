@@ -1,0 +1,1 @@
+This repository contains the final version of my Master's Thesis as well as modifyed OpenFOAM fiels and Libraries in order to implement a viscoelastic fluid model for the simulation of single bubble using as surface-tracking solver.

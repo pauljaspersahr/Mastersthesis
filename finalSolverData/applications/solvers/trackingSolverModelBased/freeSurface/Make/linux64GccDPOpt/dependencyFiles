@@ -1,0 +1,11 @@
+DEPENDENCIES = \
+freeSurface.dep\
+makeFreeSurfaceData.dep\
+freeSurfacePointDisplacement.dep\
+correctedFvPatchFields/correctedFvPatchField/correctedFvPatchFields.dep\
+$(basicCorrectedFvPatchFields)/fixedGradient/fixedGradientCorrectedFvPatchFields.dep\
+$(basicCorrectedFvPatchFields)/fixedValue/fixedValueCorrectedFvPatchFields.dep\
+$(basicCorrectedFvPatchFields)/zeroGradient/zeroGradientCorrectedFvPatchFields.dep\
+patchCorrectedSnGrad/patchCorrectedSnGrads.dep\
+functionObjects/bubbleHistory/bubbleHistory.dep\
+functionObjects/sloshingHistory/sloshingHistory.dep
